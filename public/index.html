@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>PochiPochi Composer Demo</title>
+</head>
+<body>
+  <h1>PochiPochi Composer Demo</h1>
+
+  <section>
+    <h2>Tag Mapping</h2>
+    <input id="tags" value="ねこ, だいぼうけん" />
+    <button onclick="mapTags()">Map</button>
+    <pre id="map-result"></pre>
+  </section>
+
+  <section>
+    <h2>Mix Safety</h2>
+    <label>trebleGainDb <input id="treble" value="6" /></label>
+    <label>lowpassHz <input id="lowpass" value="20000" /></label>
+    <label>loudnessLUFS <input id="loudness" value="-10" /></label>
+    <button onclick="enforceMix()">Enforce</button>
+    <pre id="mix-result"></pre>
+  </section>
+
+  <section>
+    <h2>Quantize Melody</h2>
+    <textarea id="melody" rows="4" cols="40">{"ppq":480,"length":4,"notes":[{"pitch":61,"start":0,"duration":0.5}]}</textarea>
+    <label>Key <input id="key" value="C" /></label>
+    <label>Scale <input id="scale" value="major" /></label>
+    <button onclick="quantize()">Quantize</button>
+    <pre id="quantize-result"></pre>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
